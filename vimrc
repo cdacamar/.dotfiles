@@ -62,8 +62,9 @@ let g:tex_flavor='latex'
 let g:ycm_confirm_extra_conf = 0
 
 " YCM (keybindings)
-"map <F12> :YcmCompleter GoToDefinition<CR>
+map <F12> :!./compile<CR>
 "map <C-F12> :YcmCompleter GoToDeclaration<CR>
+"map <F12> :YcmCompleter GoToDefinition<CR>
 "map <C-j> :YcmCompleter GetType<CR>
 
 "clang_complete

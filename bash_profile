@@ -7,17 +7,24 @@ export YELLOW='\e[1;33m'
 export BLUE='\e[1;34m'
 export NULL='\e[m'
 
-PS1="[\[$RED\]\W>\[$NULL\]] "
+function git_ps1() {
+  if [ ! -z `__git_ps1` ]
+  then 
+    PS1="[\[$RED\]\w\[$NULL\]\[$BLUE\]`__git_ps1`\[$NULL\]]> "
+  else
+    PS1="[\[$RED\]\w\[$NULL\]]> "
+  fi
+}
+export PROMPT_COMMAND='git_ps1;ConEmuC -StoreCWD'
 
 #setup vbox mount
 alias vboxsetup='sudo modprobe -a vboxguest vboxsf vboxvideo'
 alias vboxmount='sudo mount -t vboxsf C_DRIVE /mnt'
 
 # quickpath
-alias bootloader='cd ~/projects/svn/trunk/capsher/products/boot_loader'
-alias enpro='cd ~/projects/svn/trunk/projects/enpro/SmartIOT'
-alias tti='cd ~/projects/svn/trunk/projects/tti/goldeneye'
-alias cbout='cd ~/projects/baseline_out/Products'
+alias msvc='cd ~/Documents/MSVC/msvc'
+alias compiler='cd ~/Documents/MSVC/msvc/src/vctools/Compiler/CxxFE/sl/p1/c'
+alias ifc='cd ~/Documents/MSVC/msvc/src/vctools/Compiler/ifc'
 
 #ls alias
 alias dir='dir --color=auto'
@@ -48,7 +55,7 @@ alias pcinfo='clear;date;echo;cal;
 
 #grep
 #alias grep='grep --color=auto -i'
-alias grep='grep --color=always'
+alias grep='grep -n --color=always'
 alias egrep='egrep --color=auto'
 alias psg='ps aux | grep'
 alias cppgrep='~/srcsearch.sh -e "cpp|h" --color=always -n'
