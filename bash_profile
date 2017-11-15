@@ -1,4 +1,4 @@
-export PATH=~/bin/:~/.gem/ruby/2.4.0/bin:$PATH
+export PATH=~/bin/:~/bin/with/:~/.gem/ruby/2.4.0/bin:$PATH
 
 #colors
 export RED='\e[1;31m'
@@ -7,6 +7,7 @@ export YELLOW='\e[1;33m'
 export BLUE='\e[1;34m'
 export NULL='\e[m'
 
+export PS1='$ '
 function git_ps1() {
   if [ ! -z `__git_ps1` ]
   then 
@@ -23,8 +24,13 @@ alias vboxmount='sudo mount -t vboxsf C_DRIVE /mnt'
 
 # quickpath
 alias msvc='cd ~/Documents/MSVC/msvc'
+alias contest='cd ~/Documents/MSVC/contest'
+alias qa='cd ~/Documents/MSVC/msvc/src/qa/VC/FE'
 alias compiler='cd ~/Documents/MSVC/msvc/src/vctools/Compiler/CxxFE/sl/p1/c'
 alias ifc='cd ~/Documents/MSVC/msvc/src/vctools/Compiler/ifc'
+alias msvc2='cd /e/Documents/msvc'
+alias qa2='cd /e/Documents/msvc/src/qa/VC/FE'
+alias compiler2='cd /e/Documents/msvc/src/vctools/Compiler/CxxFE/sl/p1/c'
 
 #ls alias
 alias dir='dir --color=auto'
@@ -38,6 +44,36 @@ alias lal='ls -la'
 #data moving
 alias mv='mv -i'
 alias cp='cp -i'
+
+function swap() {
+  if [ $# -lt 2 ]
+  then
+      echo 'swap takes two files'
+      return 1
+  fi
+
+  lhs="$1"
+  rhs="$2"
+
+  if [ ! -f "$lhs" ]
+  then
+    echo "file: \"$lhs\" does not exist"
+    return 1
+  fi
+
+  if [ ! -f "$rhs" ]
+  then
+    echo "file: \"$rhs\" does not exist"
+    return 1
+  fi
+
+  cp "$lhs" "$lhs".tmp
+
+  mv -f "$rhs" "$lhs"
+
+  mv "$lhs".tmp "$rhs"
+}
+
 
 #information
 alias du='du -h'
