@@ -1,0 +1,42 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+           "name": "Debug c1xx writer",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "C:/Users/cadacama.REDMOND/Documents/MSVC/msvc/binaries/x86dbg/bin/i386/cl.exe",
+            "args": ["@C:/Users/cadacama.REDMOND/Documents/MSVC/tmp_solution.parse_trees_modules/debug.rsp"],
+            "stopAtEntry": false,
+            "cwd": "C:/Users/cadacama.REDMOND/Documents/MSVC/tmp_solution.parse_trees_modules/",
+            "environment": [],
+            "externalConsole": false
+        },
+        {
+           "name": "Debug c1xx reader",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "C:/Users/cadacama.REDMOND/Documents/MSVC/msvc/binaries/x86dbg/bin/i386/cl.exe",
+            "args": ["@C:/Users/cadacama.REDMOND/Documents/MSVC/tmp_solution.parse_trees_modules_reader/debug.rsp"],
+            "stopAtEntry": false,
+            "cwd": "C:/Users/cadacama.REDMOND/Documents/MSVC/msvc/out/two_phase_modules/",
+            //"cwd": "C:/Users/cadacama.REDMOND/Documents/MSVC/tmp_solution.parse_trees_modules_reader/",
+            "environment": [],
+            "externalConsole": false
+        },
+        {
+           "name": "Debug c1xx default",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "C:/Users/cadacama.REDMOND/Documents/MSVC/msvc/binaries/x86dbg/bin/i386/cl.exe",
+            "args": ["@C:/Users/cadacama.REDMOND/Documents/MSVC/rsp/debug.rsp"],
+            "stopAtEntry": false,
+            "cwd": "C:/Users/cadacama.REDMOND/Documents/MSVC/rsp/",
+            "environment": [],
+            "externalConsole": false
+        }
+    ]
+}
