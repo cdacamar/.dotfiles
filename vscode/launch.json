@@ -11,7 +11,8 @@
             "program": "C:/Users/cadacama.REDMOND/Documents/MSVC/msvc/binaries/x86dbg/bin/i386/cl.exe",
             "args": ["@C:/Users/cadacama.REDMOND/Documents/MSVC/tmp_solution.parse_trees_modules/debug.rsp"],
             "stopAtEntry": false,
-            "cwd": "C:/Users/cadacama.REDMOND/Documents/MSVC/tmp_solution.parse_trees_modules/",
+            "cwd": "C:/Users/cadacama.REDMOND/Documents/MSVC/msvc/out/two_phase_modules/",
+            //"cwd": "C:/Users/cadacama.REDMOND/Documents/MSVC/tmp_solution.parse_trees_modules/",
             "environment": [],
             "externalConsole": false
         },
@@ -32,9 +33,22 @@
             "type": "cppvsdbg",
             "request": "launch",
             "program": "C:/Users/cadacama.REDMOND/Documents/MSVC/msvc/binaries/x86dbg/bin/i386/cl.exe",
+            //"program": "C:/Users/cadacama.REDMOND/Documents/MSVC/msvc/binaries/amd64dbg/bin/amd64/cl.exe",
             "args": ["@C:/Users/cadacama.REDMOND/Documents/MSVC/rsp/debug.rsp"],
             "stopAtEntry": false,
             "cwd": "C:/Users/cadacama.REDMOND/Documents/MSVC/rsp/",
+            "environment": [],
+            "externalConsole": false
+        },
+        {
+           "name": "Debug cl.rsp",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "C:/Users/cadacama.REDMOND/Documents/MSVC/msvc/binaries/x86chk/bin/i386/cl.exe",
+            //"program": "C:/Users/cadacama.REDMOND/Documents/MSVC/msvc/binaries/amd64dbg/bin/amd64/cl.exe",
+            "args": ["@C:/Users/cadacama.REDMOND/Documents/MSVC/msvc/out/parse_errors/repro/cl.rsp"],
+            "stopAtEntry": false,
+            "cwd": "C:/Users/cadacama.REDMOND/Documents/MSVC/msvc/out/parse_errors/repro",
             "environment": [],
             "externalConsole": false
         }

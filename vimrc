@@ -53,8 +53,15 @@ filetype on
 
 set number lines
 
+au BufNewFile,BufRead *.ixx set syntax=cpp
+
 " General keybindings
+" --- Insert-mode ---
+" Open line above cursor
 imap <C-o> <esc>O
+" --- Edit-mode ---
+" Reload syntax highlighting
+map <C-m> :e<CR>
 
 let g:tex_flavor='latex'
 

@@ -82,7 +82,9 @@
         "pchcdat.h": "c",
         "sha256.cpp": "c",
         "*.rh": "cpp",
-        "sstream": "cpp"
+        "sstream": "cpp",
+        "cctype": "cpp",
+        "compare": "cpp"
     },
     "C_Cpp.errorSquiggles": "Enabled"
 }
