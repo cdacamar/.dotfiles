@@ -1,5 +1,7 @@
 {
     "files.associations": {
+        "*.cxx": "cpp",
+        "*.c": "cpp",
         "functional": "cpp",
         "array": "cpp",
         "deque": "cpp",
@@ -84,7 +86,14 @@
         "*.rh": "cpp",
         "sstream": "cpp",
         "cctype": "cpp",
-        "compare": "cpp"
+        "compare": "cpp",
+        "concepts": "cpp",
+        "span": "cpp",
+        "mutex": "cpp",
+        "thread": "cpp",
+        "*.idl": "cpp",
+        "gsl_util": "cpp"
     },
-    "C_Cpp.errorSquiggles": "Enabled"
+    "C_Cpp.errorSquiggles": "Enabled",
+    "cSpell.enabled": false
 }

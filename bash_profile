@@ -9,18 +9,27 @@ export NULL='\e[m'
 
 export PS1='$ '
 function git_ps1() {
-  if [ ! -z `__git_ps1` ]
+  val=`__git_ps1`
+  if [ ! -z "$val" ]
   then 
-    PS1="[\[$RED\]\w\[$NULL\]\[$BLUE\]`__git_ps1`\[$NULL\]]> "
+    PS1="[\[$RED\]\w\[$NULL\]\[$BLUE\]"$val"\[$NULL\]]> "
   else
     PS1="[\[$RED\]\w\[$NULL\]]> "
   fi
 }
 export PROMPT_COMMAND='git_ps1;ConEmuC -StoreCWD'
 
+export MSVC=~/Documents/MSVC/msvc
+
 #setup vbox mount
 alias vboxsetup='sudo modprobe -a vboxguest vboxsf vboxvideo'
 alias vboxmount='sudo mount -t vboxsf C_DRIVE /mnt'
+
+# git
+alias st='git status'
+alias co='git checkout'
+alias fp='git fetch -p'
+alias fe='git fetch -p && git branch -d prod/fe && git checkout prod/fe'
 
 # quickpath
 alias msvc='cd ~/Documents/MSVC/msvc'
@@ -42,7 +51,9 @@ alias rls='reset;ls'
 alias lal='ls -la'
 
 #data moving
+alias mvf='\mv -f'
 alias mv='mv -i'
+alias cpf='\cp -f'
 alias cp='cp -i'
 
 function swap() {
@@ -51,26 +62,20 @@ function swap() {
       echo 'swap takes two files'
       return 1
   fi
-
   lhs="$1"
   rhs="$2"
-
   if [ ! -f "$lhs" ]
   then
     echo "file: \"$lhs\" does not exist"
     return 1
   fi
-
   if [ ! -f "$rhs" ]
   then
     echo "file: \"$rhs\" does not exist"
     return 1
   fi
-
-  cp "$lhs" "$lhs".tmp
-
+  mv "$lhs" "$lhs".tmp
   mv -f "$rhs" "$lhs"
-
   mv "$lhs".tmp "$rhs"
 }
 
