@@ -2,6 +2,7 @@
     "files.associations": {
         "*.cxx": "cpp",
         "*.c": "cpp",
+        "*.h": "cpp",
         "functional": "cpp",
         "array": "cpp",
         "deque": "cpp",
@@ -92,8 +93,21 @@
         "mutex": "cpp",
         "thread": "cpp",
         "*.idl": "cpp",
-        "gsl_util": "cpp"
+        "gsl_util": "cpp",
+        "ranges": "cpp",
+        "atomic": "cpp",
+        "iostream": "cpp",
+        "*.hrc": "c",
+        "gsl_assert": "cpp",
+        "stop_token": "cpp",
+        "bit": "cpp",
+        "clocale": "cpp",
+        "charconv": "cpp",
+        "format": "cpp",
+        "util": "cpp"
     },
     "C_Cpp.errorSquiggles": "Enabled",
-    "cSpell.enabled": false
+    "cSpell.enabled": true,
+    "files.encoding": "utf8",
+    "editor.maxTokenizationLineLength": 200000
 }

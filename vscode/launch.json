@@ -9,12 +9,12 @@
             "type": "cppvsdbg",
             "request": "launch",
             "program": "C:/Users/cadacama.REDMOND/Documents/MSVC/msvc/binaries/x86dbg/bin/i386/cl.exe",
+            //"program": "C:/Users/cadacama.REDMOND/Documents/MSVC/msvc/binaries/x86dbg/bin/x86_amd64/cl.exe",
             "args": ["@C:/Users/cadacama.REDMOND/Documents/MSVC/tmp_solution.parse_trees_modules/debug.rsp"],
             "stopAtEntry": false,
-            "cwd": "C:/Users/cadacama.REDMOND/Documents/MSVC/msvc/out/two_phase_modules/",
+            "cwd": "C:/Users/cadacama.REDMOND/Documents/MSVC/msvc/out/two_phase_modules",
             //"cwd": "C:/Users/cadacama.REDMOND/Documents/MSVC/tmp_solution.parse_trees_modules/",
-            "environment": [],
-            "externalConsole": false
+            "environment": []
         },
         {
            "name": "Debug c1xx reader",
@@ -23,10 +23,9 @@
             "program": "C:/Users/cadacama.REDMOND/Documents/MSVC/msvc/binaries/x86dbg/bin/i386/cl.exe",
             "args": ["@C:/Users/cadacama.REDMOND/Documents/MSVC/tmp_solution.parse_trees_modules_reader/debug.rsp"],
             "stopAtEntry": false,
-            "cwd": "C:/Users/cadacama.REDMOND/Documents/MSVC/msvc/out/two_phase_modules/",
+            "cwd": "C:/Users/cadacama.REDMOND/Documents/MSVC/msvc/out/two_phase_modules",
             //"cwd": "C:/Users/cadacama.REDMOND/Documents/MSVC/tmp_solution.parse_trees_modules_reader/",
-            "environment": [],
-            "externalConsole": false
+            "environment": []
         },
         {
            "name": "Debug c1xx default",
@@ -37,21 +36,23 @@
             //"program": "C:/Users/cadacama.REDMOND/Documents/MSVC/msvc/binaries/amd64dbg/bin/amd64/cl.exe",
             "args": ["@C:/Users/cadacama.REDMOND/Documents/MSVC/rsp/debug.rsp"],
             "stopAtEntry": false,
-            "cwd": "C:/Users/cadacama.REDMOND/Documents/MSVC/rsp/",
-            "environment": [],
-            "externalConsole": false
+            "cwd": "C:/Users/cadacama.REDMOND/Documents/MSVC/msvc/out/parse_errors",
+            "environment": []
         },
         {
            "name": "Debug cl.rsp",
             "type": "cppvsdbg",
             "request": "launch",
             "program": "C:/Users/cadacama.REDMOND/Documents/MSVC/msvc/binaries/x86dbg/bin/i386/cl.exe",
+            //"program": "C:/Users/cadacama.REDMOND/Documents/MSVC/msvc/binaries/x86chk/bin/x86_amd64/cl.exe",
+            //"program": "C:/Users/cadacama.REDMOND/Documents/MSVC/msvc/binaries/x86chk/bin/x86_amd64/cl.exe",
             //"program": "C:/Users/cadacama.REDMOND/Documents/MSVC/msvc/binaries/amd64dbg/bin/amd64/cl.exe",
-            "args": ["@C:/Users/cadacama.REDMOND/Documents/MSVC/msvc/out/two_phase_modules/fmt.rsp"],
+            //"args": ["@C:/Users/cadacama.REDMOND/Documents/MSVC/msvc/out/parse_errors/cl.rsp"],
+            "args": ["@C:/Users/cadacama.REDMOND/Documents/MSVC/msvc/out/two_phase_modules/bug14/cl.rsp"],
             "stopAtEntry": false,
-            "cwd": "C:/Users/cadacama.REDMOND/Documents/MSVC/msvc/out/two_phase_modules",
-            "environment": [],
-            "externalConsole": false
+            "cwd": "C:/Users/cadacama.REDMOND/Documents/MSVC/msvc/out/two_phase_modules/bug14",
+            //"cwd": "E:/Documents/modules-bug-archive/20210605/repro",
+            "environment": []
         },
         {
            "name": "Debug winrt",
@@ -59,11 +60,43 @@
             "request": "launch",
             "program": "C:/Users/cadacama.REDMOND/Documents/MSVC/msvc/binaries/x86dbg/bin/i386/cl.exe",
             //"program": "C:/Users/cadacama.REDMOND/Documents/MSVC/msvc/binaries/amd64dbg/bin/amd64/cl.exe",
-            "args": ["@C:/Users/cadacama.REDMOND/Documents/MSVC/msvc/out/winrt/app.rsp"],
+            //"args": ["@C:/Users/cadacama.REDMOND/Documents/MSVC/msvc/out/winrt/app.rsp"],
+            "args": ["@C:/Users/cadacama.REDMOND/Documents/MSVC/msvc/out/winrt/module.rsp"],
             "stopAtEntry": false,
             "cwd": "C:/Users/cadacama.REDMOND/Documents/MSVC/msvc/out/winrt",
-            "environment": [],
-            "externalConsole": false
+            "environment": []
+        },
+        {
+           "name": "Debug bench",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "C:/Users/cadacama.REDMOND/Documents/MSVC/msvc/binaries/x86dbg/bin/i386/cl.exe",
+            //"program": "C:/Users/cadacama.REDMOND/Documents/MSVC/msvc/binaries/amd64dbg/bin/amd64/cl.exe",
+            "args": ["@C:/Users/cadacama.REDMOND/Documents/MSVC/msvc/out/two_phase_modules/bench/cl.rsp"],
+            "stopAtEntry": false,
+            "cwd": "C:/Users/cadacama.REDMOND/Documents/MSVC/msvc/out/two_phase_modules/bench/",
+            "environment": []
+        },
+        {
+           "name": "Debug undname",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "C:/Users/cadacama.REDMOND/Documents/MSVC/msvc/binaries/x86dbg/bin/i386/undname.exe",
+            //"program": "C:/Users/cadacama.REDMOND/Documents/MSVC/msvc/binaries/amd64dbg/bin/amd64/cl.exe",
+            "args": ["??$f@H@@YA?A_PH@Z"],
+            "stopAtEntry": false,
+            "cwd": "C:/Users/cadacama.REDMOND/Documents/MSVC/msvc/out/two_phase_modules/",
+            "environment": []
+        },
+        {
+           "name": "Debug header-units",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "C:/Users/cadacama.REDMOND/Documents/MSVC/msvc/binaries/x86dbg/bin/i386/cl.exe",
+            "args": ["@C:/Users/cadacama.REDMOND/Documents/MSVC/msvc/out/two_phase_modules/repro/cl.rsp"],
+            "stopAtEntry": false,
+            "cwd": "C:/Users/cadacama.REDMOND/Documents/MSVC/msvc/out/two_phase_modules/repro",
+            "environment": []
         }
     ]
 }
