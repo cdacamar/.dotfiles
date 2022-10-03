@@ -19,7 +19,8 @@ function git_ps1() {
 }
 export PROMPT_COMMAND='git_ps1;ConEmuC -StoreCWD'
 
-export MSVC=~/Documents/MSVC/msvc
+export MSVC2=~/Documents/MSVC/msvc
+export MSVC=/e/Documents/msvc
 
 #setup vbox mount
 alias vboxsetup='sudo modprobe -a vboxguest vboxsf vboxvideo'
@@ -30,16 +31,40 @@ alias st='git status'
 alias co='git checkout'
 alias fp='git fetch -p'
 alias fe='git fetch -p && git branch -d prod/fe && git checkout prod/fe'
+alias sup='git submodule update'
+alias logp='git log --pretty=format:"%C(auto,yellow)%h %C(auto,blue)%>(12,trunc)%ad %C(auto,green)%<(12,trunc)%aN%C(auto,reset)%s%C(auto,red)% gD% D" --date=short'
+alias git-purge='git reflog expire --expire-unreachable=now --all && git gc --prune=now'
+
+function git-stat() {
+  if [ $# -lt 1 ]
+  then
+    echo 'author please'
+    return 1
+  fi
+  author="$1"
+  locus=""
+  if [ $# -gt 1 ] && [ ! -z "$2" ]
+  then
+    locus="$2"
+  fi
+  since=""
+  if [ $# -gt 2 ] && [ ! -z "$3" ]
+  then
+    since="--since=$3"
+  fi
+  git log $since --author="$1" --pretty=tformat: --numstat $locus | awk '{inserted+=$1; deleted+=$2; delta+=$1-$2} END {printf "Commit stats:\n-  Lines added (total).... %s\n- Lines deleted (total)..  %s\n- Total lines (delta)....  %s\n- Add./Del. ratio (1:n)..  1 : %s\n", inserted, deleted, delta, deleted/inserted }'
+}
 
 # quickpath
-alias msvc='cd ~/Documents/MSVC/msvc'
+alias msvc2='cd ~/Documents/MSVC/msvc'
 alias contest='cd ~/Documents/MSVC/contest'
-alias qa='cd ~/Documents/MSVC/msvc/src/qa/VC/FE'
-alias compiler='cd ~/Documents/MSVC/msvc/src/vctools/Compiler/CxxFE/sl/p1/c'
-alias ifc='cd ~/Documents/MSVC/msvc/src/vctools/Compiler/ifc'
-alias msvc2='cd /e/Documents/msvc'
-alias qa2='cd /e/Documents/msvc/src/qa/VC/FE'
-alias compiler2='cd /e/Documents/msvc/src/vctools/Compiler/CxxFE/sl/p1/c'
+alias qa2='cd ~/Documents/MSVC/msvc/src/qa/VC/FE'
+alias compiler2='cd ~/Documents/MSVC/msvc/src/vctools/Compiler/CxxFE/sl/p1/c'
+alias ifc2='cd ~/Documents/MSVC/msvc/src/vctools/Compiler/ifc'
+alias msvc='cd /e/Documents/msvc'
+alias qa='cd /e/Documents/msvc/src/qa/VC/FE'
+alias compiler='cd /e/Documents/msvc/src/vctools/Compiler/CxxFE/sl/p1/c'
+alias ifc='cd /e/Documents/msvc/src/vctools/Compiler/ifc'
 
 #ls alias
 alias dir='dir --color=auto'
