@@ -35,6 +35,9 @@ syntax on
 
 set encoding=utf8
 
+" This disables the screen flash when navigating to file boundaries
+set t_vb=
+
 set wrap nowrap
 set hlsearch
 

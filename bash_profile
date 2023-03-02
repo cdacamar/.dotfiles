@@ -17,10 +17,17 @@ function git_ps1() {
     PS1="[\[$RED\]\w\[$NULL\]]> "
   fi
 }
-export PROMPT_COMMAND='git_ps1;ConEmuC -StoreCWD'
+
+#export PROMPT_COMMAND='git_ps1;ConEmuC -StoreCWD'
+export PROMPT_COMMAND='git_ps1'
+
+PROMPT_COMMAND=${PROMPT_COMMAND:+"$PROMPT_COMMAND; "}'printf "\e]9;9;%s\e\\" "`cygpath -w "$PWD"`"'
 
 export MSVC2=~/Documents/MSVC/msvc
-export MSVC=/e/Documents/msvc
+export MSVC=/d/msvc
+export LIST='/d/msvc/src/qa/VC/FE/compiler/test.lst'
+export UEI='/d/git_projects/UnrealEngine/Engine/Intermediate/Build/Win64/UnrealPakNonUnity/Debug'
+export UE='/d/git_projects/UnrealEngine/Engine'
 
 #setup vbox mount
 alias vboxsetup='sudo modprobe -a vboxguest vboxsf vboxvideo'
@@ -56,15 +63,16 @@ function git-stat() {
 }
 
 # quickpath
-alias msvc2='cd ~/Documents/MSVC/msvc'
+alias msvc2='cd /d/msvc_codeflow'
 alias contest='cd ~/Documents/MSVC/contest'
 alias qa2='cd ~/Documents/MSVC/msvc/src/qa/VC/FE'
 alias compiler2='cd ~/Documents/MSVC/msvc/src/vctools/Compiler/CxxFE/sl/p1/c'
 alias ifc2='cd ~/Documents/MSVC/msvc/src/vctools/Compiler/ifc'
-alias msvc='cd /e/Documents/msvc'
-alias qa='cd /e/Documents/msvc/src/qa/VC/FE'
-alias compiler='cd /e/Documents/msvc/src/vctools/Compiler/CxxFE/sl/p1/c'
-alias ifc='cd /e/Documents/msvc/src/vctools/Compiler/ifc'
+alias msvc='cd /d/msvc'
+alias qa='cd /d/msvc/src/qa/VC/FE'
+alias compiler='cd /d/msvc/src/vctools/Compiler/CxxFE/sl/p1/c'
+alias ifc='cd /d/msvc/src/vctools/Compiler/ifc'
+alias units='cd /d/msvc/src/vctools/crt/github/tests/std/tests/P1502R1_standard_library_header_units'
 
 #ls alias
 alias dir='dir --color=auto'

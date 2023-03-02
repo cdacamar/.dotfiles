@@ -6,7 +6,7 @@
         {
             "label": "build",
             "type": "shell",
-            "command": "vc build c1xx -m",
+            "command": "vc build c1xx -m -cdbg",
             "problemMatcher": [
                 "$msCompile"
             ],
