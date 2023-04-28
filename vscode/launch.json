@@ -54,6 +54,17 @@
             "console": "internalConsole"
         },
         {
+           "name": "Debug fmt-test",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "D:/msvc/binaries/amd64dbg/bin/amd64/cl.exe",
+            "args": ["@D:/msvc/out/two_phase_modules/fmt-repro/tests/test.rsp"],
+            "stopAtEntry": false,
+            "cwd": "D:/msvc/out/two_phase_modules/fmt-repro/tests",
+            "environment": [],
+            "console": "internalConsole"
+        },
+        {
            "name": "Debug std units",
             "type": "cppvsdbg",
             "request": "launch",
@@ -122,7 +133,7 @@
             "type": "cppvsdbg",
             "request": "launch",
             "program": "D:/msvc/binaries/amd64dbg/bin/amd64/cl.exe",
-            "args": ["@D:/git_projects/UnrealEngine/Engine/Intermediate/Build/Win64/UnrealPakNonUnity/Debug/CoreUObject/TopLevelAssetPath.h.obj.rsp", "/d1db178,179"],
+            "args": ["@D:/git_projects/UnrealEngine/Engine/Intermediate/Build/Win64/UnrealPakNonUnity/Debug/Core/TextLocalizationManager.cpp.obj.rsp", "/d1db178,179"],
             "stopAtEntry": false,
             //"cwd": "C:/Users/cadacama.REDMOND/Documents/MSVC/tmp_solution.parse_trees_modules_reader/",
             "cwd": "D:/git_projects/UnrealEngine/Engine/Source",

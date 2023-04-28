@@ -29,6 +29,9 @@ export LIST='/d/msvc/src/qa/VC/FE/compiler/test.lst'
 export UEI='/d/git_projects/UnrealEngine/Engine/Intermediate/Build/Win64/UnrealPakNonUnity/Debug'
 export UE='/d/git_projects/UnrealEngine/Engine'
 
+# fred
+alias fred='/d/git_projects/fred/build/RelWithDebInfo/fred.exe'
+
 #setup vbox mount
 alias vboxsetup='sudo modprobe -a vboxguest vboxsf vboxvideo'
 alias vboxmount='sudo mount -t vboxsf C_DRIVE /mnt'
